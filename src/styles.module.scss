@@ -1,0 +1,80 @@
+$paddingLarge: 50px;
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $paddingLarge;
+  background-color: blue;
+}
+
+$imgSize: 200px;
+
+.profilePicture {
+  border-radius: $imgSize;
+  height: $imgSize;
+  width: $imgSize;
+  object-fit: cover;
+  cursor: pointer;
+  border: solid 2px lightgray;
+  margin: auto;
+}
+
+.imageContainer {
+  position: absolute;
+  cursor: pointer;
+  z-index: 9;
+}
+
+$moonHeight: 80px;
+
+.moonsContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 500px;
+}
+
+.moonContainer {
+  position: absolute;
+}
+
+@keyframes moonOpenAnimation {
+  from {
+    left: 0;
+    top: 0;
+  }
+}
+
+.moon {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: $moonHeight;
+  width: $moonHeight;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px blue;
+  color: blue;
+  border-radius: $moonHeight;
+  cursor: pointer;
+  animation-name: moonOpenAnimation;
+  animation-duration: 0.5s;
+}
+
+@keyframes moonCloseAnimation {
+  to {
+    left: 0;
+    top: 0;
+  }
+}
+
+.moonClose {
+  animation-name: moonCloseAnimation;
+  animation-duration: 0.5s;
+}
