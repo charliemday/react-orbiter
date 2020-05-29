@@ -1,10 +1,19 @@
-Dummy react component
+React Orbiter
 ====
 
-This will be a how to guide for your fellow developers
-
+This is React Orbiter
 ```
-<DummyComponent />
+import Orbiter from 'react-orbiter'
+
+...
+
+<Orbiter 
+  data={moonData}
+  image={'https://cdn.britannica.com/s:800x450,c:crop/43/172743-138-545C299D/overview-Barack-Obama.jpg'}
+  radius={200}
+  moonColor={'red'}
+  moonSize={65}
+/>
 ```
 
 etc
